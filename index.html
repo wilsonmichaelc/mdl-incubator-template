@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>ABP</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-pink.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/solarized-dark.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/askbuildplay.css">
+    <style>
+      #view-source {
+        position: fixed;
+        display: block;
+        right: 0;
+        bottom: 0;
+        margin-right: 40px;
+        margin-bottom: 40px;
+        z-index: 900;
+      }
+      .abp-build-card-title {
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      .abp-build-card-code {
+        max-height: 150px;
+        overflow: hidden;
+      }
+      .abp-build-card-supporting-text {
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+      }
+      .mdl-layout__content {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+       }
+       .abp-giant-icon {
+         cursor: pointer;
+       }
+       .mdl-layout__content > *:not(.mdl-layout-spacer) {
+       -webkit-flex: none;
+       -ms-flex: none;
+       flex: none;
+       }
+    </style>
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll" style="background-color: #424242;">
+        <!-- <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div> -->
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <h2>Pharmacometrics Incubator</h2>
+        </div>
+        <!-- <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div> -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+          <a href="#home" class="mdl-layout__tab is-active">Start</a>
+          <a href="#ask" class="mdl-layout__tab">Ask</a>
+          <a href="#build" class="mdl-layout__tab">Build</a>
+          <a href="#play" class="mdl-layout__tab">Play</a>
+          <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+            <i class="material-icons" role="presentation">add</i>
+            <span class="visuallyhidden">Add</span>
+          </button> -->
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <!-- Home Tab -->
+        <div class="mdl-layout__tab-panel is-active" id="home">
+          <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+              <div class="mdl-card__supporting-text">
+                <div class="abp-giant-icon" href="ask"><i class="material-icons abp-color-ask">help</i></div>
+                <div class="abp-giant-text">Ask</div>
+              </div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+              <div class="mdl-card__supporting-text">
+                <div class="abp-giant-icon" href="build"><i class="material-icons abp-color-build">build</i></div>
+                <div class="abp-giant-text">Build</div>
+              </div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <div  class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+              <div class="mdl-card__supporting-text">
+                <div class="abp-giant-icon" href="play"><i class="material-icons abp-color-play">play_circle_filled</i></div>
+                <div class="abp-giant-text">Play</div>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-grid"></div>
+        </div>
+        <!-- /Home Tab -->
+        <!-- Ask Tab -->
+        <div class="mdl-layout__tab-panel" id="ask">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Upload Your...</h4>
+                <button class="mdl-cell mdl-cell--3-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect abp-color-bak-ask">Dataset</button>
+                <div class="mdl-layout-spacer"></div>
+                <button class="mdl-cell mdl-cell--3-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect abp-color-bak-build">Publication</button>
+                <div class="mdl-layout-spacer"></div>
+                <button class="mdl-cell mdl-cell--3-col mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect abp-color-bak-play">Challenge</button>
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" target="_blank" class="mdl-button">Help</a>
+              </div>
+            </div>
+          </section>
+          <section></section>
+        </div>
+        <!-- /Ask Tab -->
+        <!-- Build Tab -->
+        <div class="mdl-layout__tab-panel" id="build">
+          <div class="mdl-grid">
+            <!-- Code Card  -->
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+                <div class="mdl-card__title"><h4 class="abp-build-card-title">R</h4></div>
+                <div class="mdl-card__supporting-text abp-build-card-supporting-text">
+<pre><code class="r solarized-dark abp-build-card-code">p <- list(CL = 1, V  = 10, KA = 0.5)
+
+pk1 <- new_ode_model("pk_1cmt_oral")
+
+r1 <- new_regimen(amt = 100, times = c(0, 12, 24, 36))
+
+dat <- sim_ode (ode = "pk1", par = p, regimen = r1)
+
+ggplot(dat, aes(x=t, y=y)) + geom_line() + facet_wrap(~comp) + theme_empty()
+</code></pre></div>
+                <div class="mdl-card__actions"><a href="#" target="_blank" class="mdl-button">Build</a></div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <!-- / Code Card  -->
+
+            <!-- Code Card  -->
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+                <div class="mdl-card__title"><h4 class="abp-build-card-title">Python</h4></div>
+                <div class="mdl-card__supporting-text abp-build-card-supporting-text">
+<pre><code class="r solarized-dark abp-build-card-code">#!/usr/bin/python
+
+import os, sys, subprocess, time, shutil, re, json
+
+while True:
+    try:
+        job = fetchJob()
+        if job is None:
+            print("No Jobs Found. Sleeping 10 seconds.")
+            time.sleep(10)
+        else:
+            print("Executing Job: %d" % job.id)
+            updateStatus(job.id, "running")
+            job = executeJob(job)
+            if job.results is "error":
+                updateStatus(job.id, "error")
+                print("Job failed.")
+            else:
+                updateResult(job.id, json.dumps(job.results))
+                updateStatus(job.id, "done")
+                print("Job complete.")
+    except Exception:
+        pass
+</code></pre></div>
+                <div class="mdl-card__actions"><a href="#" target="_blank" class="mdl-button">Build</a></div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <!-- / Code Card  -->
+          </div>
+          <div class="mdl-grid">
+            <!-- Code Card  -->
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+                <div class="mdl-card__title"><h4 class="abp-build-card-title">Javascript</h4></div>
+                <div class="mdl-card__supporting-text abp-build-card-supporting-text">
+<pre><code class="r solarized-dark abp-build-card-code">if(df[i][0] <= (INFD+0.001)){
+  var A2term1 = (((A2last*E3+Doserate+A3last*k32)-A2last*lambda1)*Math.pow(Math.E, -t*lambda1)-((A2last*E3+Doserate+A3last*k32)-A2last*lambda2)*Math.pow(Math.E, -t*lambda2))/(lambda2-lambda1);
+  var A2term2 = Doserate*A1last*KA*(Math.pow(Math.E, -t*KA)*(E3-KA)/((lambda1-KA)*(lambda2-KA))+Math.pow(Math.E, -t*lambda1)*(E3-lambda1)/((lambda2-lambda1)*(KA-lambda1))+Math.pow(Math.E, -t*lambda2)*(E3-lambda2)/((lambda1-lambda2)*(KA-lambda2)));
+  df[i][4] = A2term1+A2term2;
+  var A3term1 = (((A3last*E2+A2last*k23)-A3last*lambda1)*Math.pow(Math.E, -t*lambda1)-((A3last*E2+A2last*k23)-A3last*lambda2)*Math.pow(Math.E, -t*lambda2))/(lambda2-lambda1);
+  var A3term2 = Doserate*A1last*KA*k23*(Math.pow(Math.E, -t*KA)/((lambda1-KA)*(lambda2-KA))+Math.pow(Math.E, -t*lambda1)/((lambda2-lambda1)*(KA-lambda1))+Math.pow(Math.E, -t*lambda2)/((lambda1-lambda2)*(KA-lambda2)));
+  df[i][5] = A3term1+A3term2;
+  var A1last = A1last*Math.pow(Math.E, -t*KA);
+  df[i][3] = A1last + df[i][1];
+}
+</code></pre></div>
+                <div class="mdl-card__actions"><a href="#" target="_blank" class="mdl-button">Build</a></div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <!-- / Code Card  -->
+
+            <!-- Code Card  -->
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+                <div class="mdl-card__title"><h4 class="abp-build-card-title">Perl</h4></div>
+                <div class="mdl-card__supporting-text abp-build-card-supporting-text">
+<pre><code class="r solarized-dark abp-build-card-code">my $filename = 'check.txt';
+if(open F,">$filename")
+{
+  close F;
+  unlink "$filename"';
+  print 'Permissions are OK.';
+} else{
+  print 'Permission denied for writing files!';
+}
+</code></pre></div>
+                <div class="mdl-card__actions"><a href="#" target="_blank" class="mdl-button">Build</a></div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <!-- / Code Card  -->
+          </div>
+        </div>
+        <!-- /Build Tab -->
+        <!-- Play Tab -->
+        <!-- Build Tab -->
+        <div class="mdl-layout__tab-panel" id="play">
+          <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+                <img src="images/play1.png" style="max-height: 600px;"></img>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-card mdl-cell mdl-cell--5-col mdl-shadow--2dp">
+              <div class="mdl-card__supporting-text">
+                <img src="images/play2.png" style="max-height: 600px;"></img>
+              </div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+          </div>
+        </div>
+        <!-- /Build Tab -->
+
+        <div class="mdl-layout-spacer"></div>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--middle-section">
+
+          </div>
+          <div class="mdl-mini-footer--bottom-section">
+            <div class="mdl-logo">
+              Help
+            </div>
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="#">Privacy and Terms</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="js/min/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+      $(document).on('click', '.abp-giant-icon', function(){
+        $('.is-active').removeClass('is-active');
+        $('#'+$(this).attr('href')).addClass('is-active');
+      });
+    </script>
+  </body>
+</html>

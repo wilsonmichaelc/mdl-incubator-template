@@ -1,0 +1,52 @@
+.abp-giant-icon {
+  text-align: center;
+  vertical-align: middle;
+  overflow-x: inherit;
+}
+
+i.material-icons {
+  font-size: 1800%;
+}
+
+ .abp-giant-text {
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.abp-color-ask {
+  /*background-color: rgb(76, 175, 80);*/
+  color: rgb(76, 175, 80);
+}
+
+.abp-color-build {
+  /*background-color: rgb(233, 30, 99);*/
+  color: rgb(233, 30, 99);
+}
+
+.abp-color-play {
+  /*background-color: rgb(255, 235, 59);*/
+  color: rgb(255, 235, 59);
+}
+
+
+.abp-color-bak-ask,
+.abp-color-bak-ask:hover
+ {
+  background-color: rgb(76, 175, 80);
+  color: white;
+}
+
+.abp-color-bak-build,
+.abp-color-bak-build:hover {
+  background-color: rgb(233, 30, 99);
+  color: white;
+}
+
+.abp-color-bak-play,
+.abp-color-bak-play:hover {
+  background-color: rgb(255, 235, 59);
+  color: white;
+}
